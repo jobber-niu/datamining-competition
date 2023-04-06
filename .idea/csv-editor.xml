@@ -10,13 +10,6 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\示例数据\order_train01.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="\示例数据\predict_sku0.csv">
           <value>
             <Attribute>
