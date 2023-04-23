@@ -5,7 +5,7 @@ import seaborn
 # 基本库
 
 '''读取数据'''
-origin_data = pd.read_csv('./示例数据/order_train0.csv')
+origin_data = pd.read_csv('./B题-全部数据/order_train1.csv')
 # df.head(5)
 # df.info()
 data_frame = origin_data[['item_price','ord_qty']].describe()
@@ -72,6 +72,6 @@ if not os.path.exists('./处理过的数据'):
     os.mkdir('./处理过的数据')
 elif os.path.exists('./处理过的数据'):
     print("############################################################")
-changed_data.to_excel('./处理过的数据/changed_data.xlsx',index=False)
+changed_data.to_csv('./处理过的数据/changed_data.csv',index=False)
 
 # 更新
