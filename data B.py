@@ -115,10 +115,18 @@ for code in first_cate_codes_d:
     data_dict_new[f"data_104_{code}"] = data4.query(f"first_cate_code == {code}")
 
 '''导出不同大类的数据'''
-for i in range(101,106):
-    path = './不同地区数据/'+str(i)+'地区不同大类'
-    if not os.path.exists(path):
-        os.mkdir(path)
+for j in range(101,106):
+    for i in data_dict_new:
+        path = './不同地区数据/'+str(j)+'地区不同大类'
+        if not os.path.exists(path):
+            os.mkdir(path)
+        df = data_dict_new['{}'.format(i)]
+        df.to_excel(path + '/' + i + '.xlsx',index=False)
+
+'''小类分类（小类只有303，306下面又多支分类，其余均只有一个小类'''
+
+'''over！'''
+
 
 
 
